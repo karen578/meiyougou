@@ -1,7 +1,16 @@
 /**index.wxss**/
+.container{
+  padding-top: 40px;
+}
 .search{
   padding:20rpx;
   background-color: #ff2d4a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 10;
 }
 .search-input{
   display: flex;
@@ -35,6 +44,9 @@
 }
 .floor{
   margin-top: 20rpx;
+}
+.floor .floor_title{
+  background-color: #f4f4f4;
 }
 .floor .floor_title image{
   width: 750rpx;

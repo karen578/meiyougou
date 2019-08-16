@@ -1,1 +1,103 @@
 /* pages/category/index.wxss */
+.main{
+position: absolute;
+  top: 100rpx;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+.search{
+  padding: 20rpx;
+  background-color: #ff2d4a;
+  position: fixed;
+  top: 0;
+  left: 0;  
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.search-input{
+  height:60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+}
+.search-input icon{
+  display: block;
+  margin-top: 10rpx;
+  margin-right: 15rpx;
+}
+.categories{
+  display: flex;
+  justify-content: space-between; 
+}
+.categorySide{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: scroll;
+}
+.categorySideText{
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 20rpx;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+.title_pic image{
+  width: 500rpx;
+  height: 300rpx;
+}
+.active{
+  color:#ff2d4a;
+  font-weight: 600;
+  background-color: #fff;   
+  position: relative;       /*/为了后面的点击前会有滑动，需要进行相对定位，子绝父相*/
+}
+/* 活动前用结构伪类选择器 */
+.categorySide .active::before{
+  display: block;  /*变成块级元素 */
+  content:"";     /*内容为空 */
+  width: 4px;   
+  height: 60rpx;
+  background-color: #ff2d4a;
+  position: absolute;  /* 变成绝对定位跟随active动*/
+  top: 20rpx;
+  left: 0;
+}
+.categoryContainer{
+  flex: 1;
+  position: absolute;
+  left: 220rpx;
+  padding: 20rpx;
+  height: 100%;
+  overflow: scroll; 
+}
+.banersList{
+ display: flex;
+  flex-wrap: wrap;
+}
+.banner{
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 20rpx;
+}
+.banner image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.categoryTitle{
+  text-align: center;
+  margin: 20rpx 0;
+}
