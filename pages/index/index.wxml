@@ -1,1 +1,41 @@
 <!--index.wxml-->
+<view class="search">
+<!-- 搜索栏 -->
+ <view class="search-input">
+ <icon type="search" size="16"/> 搜索
+</view>
+</view>
+<!-- 轮播图 -->
+<swiper indicator-dots
+ indicator-color='rgba(255,255,255,0.3)'
+  autoplay>
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item.image_src}}" class="slide-image" mode="aspectFill"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 导航 -->
+<view class="menus">
+<image src="{{item.image_src}}" wx:for="{{menus}}" wx:key="{{index}}">
+</image>
+</view>
+<!-- 楼层 -->
+<view class="floor" wx:for="{{floorData}}" wx:key="{{index}}">
+<view class="floor_title">
+<image src="{{item.floor_title.image_src}}"></image>
+</view>
+<view class="product_list">
+<view class="product_list_left">
+<image src="{{item.product_list[0].image_src}}"> </image>
+</view>
+<view class="product_list_right">
+<image wx:for="{{item.product_list}}"
+wx:if="{{index>0}}"
+ wx:key="{{index}}" src="{{item.image_src}}">
+</image>
+</view>
+</view>
+</view>
+
+

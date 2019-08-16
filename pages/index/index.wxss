@@ -1,1 +1,59 @@
 /**index.wxss**/
+.search{
+  padding:20rpx;
+  background-color: #ff2d4a;
+}
+.search-input{
+  display: flex;
+  justify-content: center;
+  height:60rpx;
+  line-height:60rpx;
+  text-align:center;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #666;
+  font-size: 14px;
+}
+.search-input icon{
+  display: block;
+  margin-top: 10rpx;
+  margin-right:10rpx;
+  
+}
+.slide-image{
+  width:750rpx;
+  height:340rpx;
+}
+.menus{
+  display: flex;
+  padding: 20rpx;
+  justify-content: space-between;
+}
+.menus image{
+  width: 128rpx;
+  height: 140rpx;
+}
+.floor{
+  margin-top: 20rpx;
+}
+.floor .floor_title image{
+  width: 750rpx;
+  height: 59rpx;
+}
+
+.product_list{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.product_list_left image{
+  width:232rpx;
+  height: 386rpx; 
+}
+.product_list_right image{
+  padding-left: 10rpx;
+  width:233rpx;
+  height: 188rpx; 
+
+}
+
