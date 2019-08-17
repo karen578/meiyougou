@@ -1,0 +1,100 @@
+/* pages/goods_details/index.wxss */
+
+swiper {
+  width: 750rpx;
+  height: 750rpx;
+}
+
+.slide-image {
+  width: 750rpx;
+  height: 750rpx;
+}
+
+.goodsPrice {
+  font-size: 24px;
+  color: #ff2d4a;
+  padding: 20rpx 0;
+}
+
+.goodsInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goodsTitle {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+ margin-right: 20rpx;
+ margin-bottom: 50rpx;
+ font-weight: 500;
+}
+.goodsInfo .star{
+  width: 150rpx;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-left: 1px solid #eee;
+  color: #999;
+  margin: 20rpx;
+  font-size: 16rpx;
+}
+.star .starText{
+  font-size: 14px;
+  margin-top: 20rpx;
+}
+.kuaidi{
+  margin-top: -20rpx;
+  font-size: 14px;
+  color: #999;
+}
+.footer{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  justify-content: space-between;
+}
+/* 利用绝对定位和透明度为0给联系客户添加按钮 */
+.footer button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160rpx; 
+  opacity: 0;
+}
+.footer .contact{
+  width: 120rpx;
+  text-align: center;
+  font-size: 12px;
+  padding: 20rpx;
+  flex-shrink: 0;
+
+}
+.footer .cart{
+  width: 100rpx;
+  text-align: center;
+  font-size: 12px;
+   padding: 20rpx;
+    flex-shrink: 0;
+}
+.btnOrgin{
+  background-color: #f4b73f;
+  color: #fff;
+  font-size: 14px;
+  padding:  40rpx;
+}
+.btnRed{
+   background-color: #eb4450;
+    color: #fff;
+   font-size: 14px;
+    padding:  40rpx;
+}
+

@@ -1,11 +1,7 @@
 <!--pages/category/index.wxml-->
 <view class="main">
   <!-- 搜索 -->
-  <view class="search">
-    <view class="search-input">
-      <icon type="search" size="16" /> 搜索
-    </view>
-  </view>
+  <search/>
   <view class="categories">
     <!-- 侧边栏 -->
     <view class="categorySide">
@@ -16,17 +12,18 @@
     <view class="categoryContainer">
       <view class="title_pic">
         <!-- 内容顶部的图片 -->
-        <image src="https://img.alicdn.com/tfs/TB1kQJodeP2gK0jSZFoXXauIVXa-520-280.jpg_q90_.webp" mode="aspectFill"></image>
+        <image src="../../images/tupian.jpg" mode="aspectFill"></image>
       </view>
       <view class="categoryContain" wx:for="{{categories[current].children}}" wx:key="{{index}}">
         <view class="categoryTitle">
           {{item.cat_name}}
         </view>
         <view class="banersList">
-          <view class="banner" wx:for="{{item.children}}" wx:key="{{index}}">
+          <navigator url="../../pages/search_list/index?keyword={{item.cat_name}}"
+          class="banner" wx:for="{{item.children}}" wx:key="{{index}}">
             <image src="{{item.cat_icon}}"></image>
             <view>{{item.cat_name}}</view>
-          </view>
+          </navigator>
         </view>
       </view>
     </view>

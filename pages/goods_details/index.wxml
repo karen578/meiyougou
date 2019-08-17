@@ -1,0 +1,52 @@
+<!--pages/goods_details/index.wxml-->
+
+<!-- 轮播图 -->
+<swiper indicator-dots>
+  <block wx:for="{{details.pics}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item.pics_big}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 商品价格 -->
+<view class="goodsPrice">￥{{details.goods_price}}</view>
+<!-- 商品详细信息 -->
+<view class="goodsInfo">
+  <view class="goodsTitle">
+    {{details.goods_name}}
+  </view>
+  <view class="star">
+    <view class="iconfont icon-shoucang">
+    </view>
+    <view class="starText">收藏</view>
+  </view>
+</view>
+<view class="kuaidi">
+  快递： 免运费
+</view>
+
+<!-- 富文本框 -->
+<rich-text nodes="{{details.goods_introduce}}"></rich-text>
+
+
+<!-- 底部 -->
+<view class="footer">
+<button open-type="contact">联系客服</button>
+  <view class="contact">
+    <view class="iconfont icon-kefu">
+    </view>
+    <view>
+      联系客服
+    </view>
+  </view>
+  <view class="cart">
+    <view class="iconfont icon-gouwuche">
+    </view>
+    <view>
+      购物车
+    </view>
+  </view>
+  <!-- r如果是利用navigator进行跳转到tab栏中，需要设置open-type=“switchTab”进行跳转 -->
+  <navigator class="btnOrgin" url="../../pages/cart/index" open-type="switchTab">加入购物车</navigator>
+  <navigator class="btnRed" url="">立即购买</navigator>
+</view>

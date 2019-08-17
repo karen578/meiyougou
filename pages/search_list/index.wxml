@@ -1,0 +1,28 @@
+<!--pages/search_list/index.wxml-->
+<view class="search">
+  <view class="searchInput">
+    <icon type="search" size="16"></icon>
+    {{keyword}}
+  </view>
+</view>
+<!-- tab栏 -->
+<view class="tab">
+  <view class="tab-item {{current===index?'active':''}}" wx:for="{{['综合','销量','价格']}}" wx:key="{{index}}" bindtap="handleClick" data-index="{{index}}">{{item}} </view>
+</view>
+<!-- 商品详情 -->
+<navigator class="goods" wx:for="{{goods}}" wx:key="{{index}}" url="../../pages/goods_details/index?id={{item.goods_id}}">
+  <view class="goods-left">
+    <image src="{{item.goods_small_logo}}"></image>
+  </view>
+  <view class="goods-right">
+    <view class="goods-text">{{item.goods_name}}
+    </view>
+    <view class="goods-prices">
+      ￥
+      <text>{{item.goods_price}} </text> </view>
+  </view>
+</navigator>
+<view class="hasMore">
+{{hasMore?"加载更多":"我也是有底线的"}}
+</view>
+

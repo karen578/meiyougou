@@ -1,11 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-<view class="search">
-<!-- 搜索栏 -->
- <view class="search-input">
- <icon type="search" size="16"/> 搜索
-</view>
-</view>
+<search/>
 <!-- 轮播图 -->
 <swiper indicator-dots
  indicator-color='rgba(255,255,255,0.3)'
@@ -31,10 +26,12 @@
 <image src="{{item.product_list[0].image_src}}"> </image>
 </view>
 <view class="product_list_right">
-<image wx:for="{{item.product_list}}"
+<view class="menusContain" wx:for="{{item.product_list}}"
 wx:if="{{index>0}}"
- wx:key="{{index}}" src="{{item.image_src}}">
+ wx:key="{{index}}" >
+<image src="{{item.image_src}}">
 </image>
+</view>
 </view>
 </view>
 </view>
