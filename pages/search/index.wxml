@@ -1,0 +1,27 @@
+<!--pages/search/index.wxml-->
+<view class="search">
+  <view class="search-input">
+    <icon type="search" size="16"></icon>
+    <input placeholder="请输入你想要的商品" value="{{inputValue}}"
+    bindinput="handleInput" bindconfirm="handleEnter"></input>
+  </view>
+   <view class="cancel" wx:if="{{inputValue}}" bindtap="handleCancel">取消</view>
+</view>
+<view class="search-list" wx:if="{{inputValue}}">
+<navigator wx:for="{{ searchList}}" wx:key="{{index}}"
+ url="../../pages/goods_detail/index?id={{item.goods_id}}">{{item.goods_name}}</navigator>
+<!-- <navigator url="">中米</navigator>
+<navigator url="">大米</navigator>
+<navigator url="">min米</navigator> -->
+</view>
+<view class="search-history">
+<view class="top">
+<view class="searchText">
+历史搜索
+</view>
+<icon type="clear" size="16" bindtap="handleClearAll"></icon>
+</view>
+<view class="bottom">
+<navigator url="" wx:for="{{ history}}" wx:key="{{index}}">{{item}}</navigator>
+</view>
+</view>

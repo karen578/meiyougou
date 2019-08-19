@@ -1,2 +1,68 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="container">
+  <view class="address">
+    <view class="address-people">
+      <view class="username">
+        收货人：苏老师
+      </view>
+      <view class="phone">
+        13800138000
+      </view>
+      <view> > </view>
+    </view>
+    <view class="addressInfo">
+      收货地址：广东广州吉山幼儿园
+    </view>
+    <image src="../../images/cart_border@2x.png"></image>
+  </view>
+
+  <view class="cart-detail">
+    <view class="cart-title">
+      <icon class="iconfont icon-dianpu" size="16"></icon>
+      美友购生活馆
+    </view>
+    <view class="cart-contain">
+      <view class="contain-left">
+        <icon type="success" size="16" color="red" />
+      </view>
+      <view class="contain-right">
+        <view class="right-image">
+          <image src="/images/tupian.jpg"></image>
+        </view>
+        <view class="right-text">
+          <view class="goods-title">
+            美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆美妆馆
+          </view>
+          <view class="goods-bottom">
+            <view class="goods-price"> ￥279.00</view>
+            <view class="num">
+              <view class="goods-btn"> - </view>
+              <text class="goods-num">3</text>
+              <view class="goods-btn"> + </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+
+  <view class="footer">
+    <view class="footer-left">
+      <icon type="success" size="16" color="red" />
+      <text>全选</text>
+    </view>
+    <view class="footer-middle">
+      <view class="all">
+        合计：
+        <text> ￥14411.00</text>
+      </view>
+      <view class="yunfei">
+        包含运费
+      </view>
+    </view>
+    <view class="accounts">
+    结算
+    </view>
+  </view>
+</view>
